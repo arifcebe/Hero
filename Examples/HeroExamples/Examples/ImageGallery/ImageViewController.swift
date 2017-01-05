@@ -85,7 +85,7 @@ extension ImageViewController{
   
   override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let imageCell = collectionView.dequeueReusableCell(withReuseIdentifier: "item", for: indexPath) as! ScrollingImageCell
-    imageCell.imageView.image = UIImage(named: "Unsplash\(indexPath.item % 10)")
+    imageCell.image = UIImage(named: "Unsplash\(indexPath.item % 11)")
     imageCell.imageView.heroID = "image_\(indexPath.item)"
     imageCell.imageView.heroModifiers = "position(\(view.bounds.width/2), \(view.bounds.height+view.bounds.width/2)) scale(0.6) fade zPositionIfMatched(100)"
     imageCell.topInset = topLayoutGuide.length
